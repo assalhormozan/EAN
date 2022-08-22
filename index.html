@@ -1,0 +1,86 @@
+<html>
+    
+<head>
+    <title>Erstes-JavaScript-Programm</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    
+    <script>
+        "use strict";
+
+    function Prüfziffer() {
+        var v1;
+        var v2;
+        var v3;
+        var v4;
+        var v5;
+        var v6;
+        var v7;
+        var v8;
+        var v9;
+        var v10;
+        var v11;
+        var v12;
+        var vPrüfsumme;
+        var vPrüfziffer;
+        var vAusgabe;
+
+        v1 = parseFloat(document.getElementById("id1").value);
+        v2 = parseFloat(document.getElementById("id2").value);
+        v3 = parseFloat(document.getElementById("id3").value);
+        v4 = parseFloat(document.getElementById("id4").value);
+        v5 = parseFloat(document.getElementById("id5").value);
+        v6 = parseFloat(document.getElementById("id6").value);
+        v7 = parseFloat(document.getElementById("id7").value);
+        v8 = parseFloat(document.getElementById("id8").value);
+        v9 = parseFloat(document.getElementById("id9").value);
+        v10 = parseFloat(document.getElementById("id10").value);
+        v11 = parseFloat(document.getElementById("id11").value);
+        v12 = parseFloat(document.getElementById("id12").value);
+        
+        vPrüfsumme= (v1*1) + (v2*3) + (v3*1) + (v4*3) + (v5*1) + (v6*3) + (v7*1) + (v8*3) + (v9*1) + (v10*3) + (v11*1) + (v12*3);
+
+        vPrüfziffer= 10 - (vPrüfsumme%10); 
+        if (vPrüfziffer ==10) {
+            vPrüfziffer=0;
+        }                           
+
+
+        vAusgabe = " Die Prüfsumme ist: " + vPrüfsumme + " und die Prüfziffer ist: " + vPrüfziffer;
+               
+        document.getElementById("idAusgabe").innerHTML = vAusgabe;
+
+
+         }  
+        
+        
+    </script>
+
+
+<body>
+    <h1>Prüfziffer berechnen</h1>
+
+    <input id="id1" type="text" maxlength="1" size="1" value="0">
+    <input id="id2" type="text" maxlength="1" size="1" value="0">
+    <input id="id3" type="text" maxlength="1" size="1" value="0">
+    <input id="id4" type="text" maxlength="1" size="1" value="1">
+    <input id="id5" type="text" maxlength="1" size="1" value="9">
+    <input id="id6" type="text" maxlength="1" size="1" value="6">
+    <input id="id7" type="text" maxlength="1" size="1" value="0">
+    <input id="id8" type="text" maxlength="1" size="1" value="2">
+    <input id="id9" type="text" maxlength="1" size="1" value="1">
+    <input id="id10" type="text" maxlength="1" size="1" value="1">
+    <input id="id11" type="text" maxlength="1" size="1" value="1">
+    <input id="id12" type="text" maxlength="1" size="1" value="3"> 
+    
+    </br> 
+
+    
+
+   <button onClick="Prüfziffer();">Berechne die Prüfziffer</button>
+   </br>
+
+   <div id="idAusgabe"></div>
+</body>
+
+</html>
